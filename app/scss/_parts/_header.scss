@@ -1,9 +1,12 @@
 .header {
+  font-size: 14px;
+  line-height: 1.2;
   &__contacts {
     padding: 16px 0;
     border-bottom: 1px solid #DEDEFF;
   }
-  &__navigation{
+
+  &__navigation {
     padding: 16px 0;
   }
 
@@ -38,6 +41,7 @@
   &__link {
     position: relative;
     padding-left: 28px;
+    font-family: 'Roboto-Black';
 
     &::before {
       content: "";
@@ -64,16 +68,18 @@
 }
 
 
-.nav{
-  &__list{
-    
-  }
-  &__item{
-    &:not(:last-child){
+.nav {
+  font-family: 'Montserrat-Bold';
+
+  &__item {
+    &:not(:last-child) {
       margin-right: 32px;
     }
   }
-  &__callback{
+
+  &__callback {
     padding: 14px 0;
+    font-size: 16px;
+    line-height: 1.25;
   }
 }
