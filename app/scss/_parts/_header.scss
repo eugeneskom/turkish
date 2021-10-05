@@ -1,0 +1,79 @@
+.header {
+  &__contacts {
+    padding: 16px 0;
+    border-bottom: 1px solid #DEDEFF;
+  }
+  &__navigation{
+    padding: 16px 0;
+  }
+
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+  }
+}
+
+.contacts {
+  &__number {
+    &:not(:last-child) {
+      margin-right: 28px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    padding-left: 28px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+    }
+
+    &--phone {
+      &::before {
+        background-image: url(../images/icons/phone.png);
+      }
+    }
+
+    &--whatsapp {
+      &::before {
+        background-image: url(../images/icons/whatsapp.png);
+      }
+    }
+  }
+}
+
+
+.nav{
+  &__list{
+    
+  }
+  &__item{
+    &:not(:last-child){
+      margin-right: 32px;
+    }
+  }
+  &__callback{
+    padding: 14px 0;
+  }
+}
