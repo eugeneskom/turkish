@@ -1,0 +1,27 @@
+.course {
+  &__inner {
+    padding: 80px 0;
+    text-align: center;
+  }
+
+}
+
+.tabs {
+  &__row {
+    @include rmin($r-lg) {
+      display: flex;
+    }
+  }
+
+  &__col {
+    @include rmin($r-lg) {
+      flex: 1;
+    }
+  }
+
+  &__item {
+    span {
+      display: block;
+    }
+  }
+}

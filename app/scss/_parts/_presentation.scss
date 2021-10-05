@@ -1,0 +1,103 @@
+.presentation {
+
+  &__inner {
+    padding: 100px 0 80px;
+  }
+
+  &__row {
+    @include rmin($r-md) {
+      display: flex;
+    }
+    @include r($r-md){
+      flex-wrap: wrap;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &:not(:last-child) {
+      @include rmin($r-md) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__card-block{
+    padding: 28px 20px;
+    border: 1px solid #DEDEFF;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 185px;
+    border-radius: 4px;
+  }
+  &__price{
+    color: $t-secondary;
+    font-family: 'Montserrat-ExtraBold';
+    font-size: 40px;
+    line-height: 1.2;
+    &--small{
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    span{
+      font-size: 18px;
+    }
+  }
+  &__price-span{
+    display: block;
+  }
+  &__desc{
+    font-family: 'Montserrat-Bold';
+  }
+  &__list{
+    margin-bottom: 32px;
+  }
+  &__item{
+    padding-left: 32px;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.5;
+    &:not(:last-child){
+      margin-bottom: 12px;
+    }
+    &::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/icons/check.svg);
+    }
+  }
+  &__get{
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+  &__watch{
+    padding-left: 28px;
+    position: relative;
+    color:$t-secondary;
+    font-family: 'Roboto-Black';
+    &::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url(../images/icons/watch.svg);
+    }
+  }
+}

@@ -5,6 +5,9 @@
     padding: 54px 0 100px;
     position: relative;
   }
+  &__name{
+    text-transform: capitalize;
+  }
 
   &__title{
     margin-bottom: 42px;

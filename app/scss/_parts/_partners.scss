@@ -1,0 +1,18 @@
+.partners{
+  &__inner{
+    text-align: center;
+    padding: 80px 0;
+  }
+
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item{
+    flex: 1;
+  }
+
+}
+
+
