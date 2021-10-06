@@ -1,48 +1,103 @@
 <section class="section course">
   <div class="container">
     <div class="course__inner">
-      <span class="section__name">Курсы</span>
-      <h2 class="section__title course__title">Общий курс турецкого языка:</h2>
+      <div class="course__top section__top">
+        <span class="section__name">Курсы</span>
+        <h2 class="section__title course__title">Общий курс турецкого языка:</h2>
+      </div>
       <div class="tabs">
         <div class="tabs__buttons">
-          <button class="tabs__btn">А1 - начальный уровень</button>
-          <button class="tabs__btn">А2</button>
-          <button class="tabs__btn">B1</button>
-          <button class="tabs__btn">В2</button>
-          <button class="tabs__btn">С1</button>
+          <button class="tabs__btn" data-id="A1">А1 - начальный уровень</button>
+          <button class="tabs__btn" data-id="A2">А2</button>
+          <button class="tabs__btn" data-id="B1">B1</button>
+          <button class="tabs__btn" data-id="B2">В2</button>
+          <button class="tabs__btn" data-id="C1">С1</button>
         </div>
         <div class="tabs__content">
-          <div class="tabs__page">
+          <div class="tabs__page active" id="A1">
             <h3 class="tabs__title">Что вы будите уметь после прохождения начального уровня А1:</h3>
             <p class="tabs__text">
-              По окончании данного уровня Вы можете простыми предложениями рассказать о себе, о своей семье, о своих друзьях, о работе, описать, что Вы любите и не любите делать, умеете спрашивать и отвечать который час, использовать цифры от 1 до 1 000, можете поддержать беседу на бытовые темы (ресторан, магазин, улица), задать простые вопросы собеседнику или ответить самому на темы, связанные с аспектами бытовой жизни: об отдыхе, о еде и напитках, о ежедневных делах. Можете написать простые предложения с приветствиями и поздравлениями друзьям и близким.
+              По окончании данного уровня Вы можете простыми предложениями рассказать о себе, о своей семье, о своих
+              друзьях, о работе, описать, что Вы любите и не любите делать, умеете спрашивать и отвечать который час,
+              использовать цифры от 1 до 1 000, можете поддержать беседу на бытовые темы (ресторан, магазин, улица),
+              задать простые вопросы собеседнику или ответить самому на темы, связанные с аспектами бытовой жизни: об
+              отдыхе, о еде и напитках, о ежедневных делах. Можете написать простые предложения с приветствиями и
+              поздравлениями друзьям и близким.
             </p>
             <div class="tabs__row">
-              <div class="tabs__col">
-                <h4 class="tabs__subtitle">для справки</h4>
-                <ul class="tabs__list">
-                  <li class="tabs__item">
-                    <p>Длительность курса:<span>64 академических часа</span></p> 
+              <div class="tabs__col record">
+                <h4 class="tabs__subtitle record__title">для справки</h4>
+                <ul class="tabs__list record__list">
+                  <li class="tabs__item record__item">
+                    <p class="tabs__sentence "><span class="tabs__fat">Длительность курса:</span> 64 академических часа</p>
                   </li>
-                  <li class="tabs__item">
-                    <p>Длительность занятия: <span>2 ак.часа (90 минут)</span></p>
+                  <li class="tabs__item record__item">
+                    <p class="tabs__sentence "><span class="tabs__fat">Длительность занятия:</span> 2 ак.часа (90 минут)</p>
                   </li>
-                  <li class="tabs__item">
-                    <p>Уровень подготовки: <span>законченный уровень А1</span></p>
+                  <li class="tabs__item record__item">
+                    <p class="tabs__sentence "><span class="tabs__fat">Уровень подготовки:</span> законченный уровень А1</p>
                   </li>
-                  <li class="tabs__item">
-                    <span>В случае, если Вы не освоите материал курса, то сможете пройти его повторно по гарантии качества абсолютно бесплатно</span>
+                  <li class="tabs__item record__item">
+                    <p class="tabs__sentence ">В случае, если Вы не освоите материал курса, то сможете пройти его
+                      повторно по гарантии
+                      качества абсолютно бесплатно</p>
                   </li>
                 </ul>
               </div>
-              
+
+              <div class="tabs__col structure">
+                <h4 class="tabs__subtitle">для справки</h4>
+                <ul class="tabs__list structure__list">
+                  <li class="tabs__item structure__item">
+                    <p class="tabs__sentence ">Говорение - <span class="tabs__highlight">40%</span></p>
+                    <span class="structure__percentage" style="width: 80%"></span>
+                  </li>
+                  <li class="tabs__item structure__item">
+                    <p class="tabs__sentence ">Грамматика - <span class="tabs__highlight">20%</span></p>
+                    <span class="structure__percentage" style="width: 80%"></span>
+                  </li>
+                  <li class="tabs__item structure__item">
+                    <p class="tabs__sentence ">Аудирование - <span class="tabs__highlight">20%</span></p>
+                    <span class="structure__percentage" style="width: 80%"></span>
+                  </li>
+                  <li class="tabs__item structure__item">
+                    <p class="tabs__sentence ">Чтение - <span class="tabs__highlight">10%</span></p>
+                    <span class="structure__percentage" style="width: 80%"></span>
+                  </li>
+                  <li class="tabs__item structure__item">
+                    <p class="tabs__sentence ">Письмо - <span class="tabs__highlight">10%</span></p>
+                    <span class="structure__percentage" style="width: 80%"></span>
+                  </li>
+                </ul>
+              </div>
+              <div class="tabs__col study">
+                <h4 class="tabs__subtitle">учебные материалы</h4>
+                <div class="tabs__img">
+                  <img src="images/hitit.jpg" alt="">
+                </div>
+              </div>
+
             </div>
           </div>
-          <div class="tabs__page"></div>
-          <div class="tabs__page"></div>
-          <div class="tabs__page"></div>
-          <div class="tabs__page"></div>
+          <div class="tabs__page" id="A2">2nd page</div>
+          <div class="tabs__page" id="B1">3rd page</div>
+          <div class="tabs__page" id="B2">4th page</div>
+          <div class="tabs__page" id="C1">5th page</div>
+
+          <div class="tabs__arrows">
+            <button class="tabs__arrow tabs__arrow--left">
+              <svg class="tabs__svg">
+                <use xlink:href="sprite.svg#arrow-left"></use>
+              </svg>
+            </button>
+            <button class="tabs__arrow tabs__arrow--right">
+              <svg class="tabs__svg">
+                <use xlink:href="sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+          </div>
         </div>
+        
       </div>
     </div>
   </div>

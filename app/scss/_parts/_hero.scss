@@ -2,6 +2,7 @@
   padding-top: 130px;
 
   &__inner {
+    padding-left: 15px;
     @include rmin($r-xl) {
       margin-left: calc((100vw - 1200px) / 2);
     }
@@ -15,6 +16,7 @@
     max-width: 560px;
     align-self: center;
     justify-self: center;
+    padding: 20px 0 0;
   }
 
   &__slogan {

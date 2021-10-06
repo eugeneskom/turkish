@@ -1,0 +1,94 @@
+.footer {
+  background-color: $t-secondary;
+  color: $btn-text;
+
+  &__top {
+    padding: 60px 0 52px;
+
+    @include rmin($r-md) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__copy {
+    max-width: 200px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  &__about {
+    max-width: 270px;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 23px;
+  }
+
+  &__text {
+    margin-bottom: 15px;
+  }
+
+  &__list,
+  &__heading {
+    font-family: 'Montserrat-Bold';
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+  &__link{
+    transition: color 0.3s;
+    &:hover{
+      color: $btn-bg;
+    }
+    &:active{
+      border-bottom: 1px solid $btn-bg;
+    }
+    &:focus{
+      outline: none;
+      box-shadow: 0  3px lightsalmon;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 12px;
+
+    &:not(:last-child) {
+      &~* {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contacts-link {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+  }
+
+  &__address {
+    font-style: normal;
+  }
+
+  &__bottom{
+    border-top: 1px solid rgba($btn-text, 0.3);
+    padding: 32px 40px;
+    @include rmin($r-lg){
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+}

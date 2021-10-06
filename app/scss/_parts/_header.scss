@@ -36,6 +36,10 @@
     width: 16px;
     height: 16px;
     object-fit: contain;
+    transition: filter 0.3s;
+    &:hover{
+      filter: invert(42%) sepia(18%) saturate(2006%) hue-rotate(314deg) brightness(101%) contrast(103%);
+    }
   }
 }
 

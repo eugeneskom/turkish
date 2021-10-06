@@ -1,0 +1,46 @@
+.start {
+  padding: 60px 0;
+  color: $btn-text;
+
+  &__inner {
+    position: relative;
+    background-color: $t-secondary;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 80px 0 80px 70px;
+    border-radius: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(90.03deg, #3035C3 0.03%, rgba(48, 53, 195, 0.954249) 21.37%, rgba(48, 53, 195, 0.863855) 39.97%, rgba(48, 53, 195, 0.718583) 55.19%, rgba(48, 53, 195, 0) 99.97%), ;
+      border-radius: 20px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    max-width: 470px;
+  }
+
+  &__item {
+    padding: 6px 0;
+    &::marker {
+      font-family: 'Montserrat-ExtraBold';
+      color: $btn-bg;
+      font-size: 24px;
+      line-height: 1.5;
+      position: relative;
+      top: 15px;
+
+    }
+  }
+  &__link{
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,47 @@
+.advantages{
+  &__inner{
+   padding: 80px 0; 
+   display: flex;
+   flex-direction:column;
+   align-items: center;
+  }
+  &__row{
+    width: 100%;
+    margin-bottom: 80px;
+    @include rmin($r-md){
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  &__col{
+    text-align: center;
+    @include rmin($r-md){
+      flex-basis: 200px;
+    }
+  }
+  &__img-box{
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    box-shadow: 0px 10px 24px rgba(73, 95, 211, 0.12);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  &__highlight{
+    font-weight: 800;
+    display: block;
+    margin-bottom: 12px;
+  }
+  &__signup{
+    
+  }
+  
+}
