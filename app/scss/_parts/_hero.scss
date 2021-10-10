@@ -1,22 +1,33 @@
 .hero {
-  padding-top: 130px;
+  @include r($r-lg) {
+    text-align: center;
+  }
 
   &__inner {
     padding-left: 15px;
+
     @include rmin($r-xl) {
       margin-left: calc((100vw - 1200px) / 2);
     }
 
-    @include rmin($r-md) {
+    @include rmin($r-lg) {
       display: flex;
     }
   }
 
   &__content {
     max-width: 560px;
-    align-self: center;
-    justify-self: center;
-    padding: 20px 0 0;
+    padding: 150px 0 0;
+
+    @include rmin($r-lg) {
+      align-self: center;
+      justify-self: center;
+    }
+
+    @include r($r-lg) {
+      margin: 0 auto 52px;
+
+    }
   }
 
   &__slogan {
@@ -32,7 +43,25 @@
   }
 
   &__bg {
-    max-width: 605px;
+    display: inline-block;
     margin-left: auto;
+
+    @include r($r-lg) {
+      margin: 0 auto;
+    }
+
+    @include r($r-sm) {
+      width: 327px;
+    }
+  }
+
+  &__bg-img {
+    max-height: 768px;
+    border-radius: 12px;
+
+    @include r($r-sm) {
+      max-height: 276px;
+      width: 100%;
+    }
   }
 }

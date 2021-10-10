@@ -27,4 +27,16 @@ $(function () {
     }
   })
 
+
+  //toggle header menu
+  let toggleBtn = document.querySelector('.navbtn')
+  let toggleIcon = document.querySelector('.navbtn__icon');
+  let menuList = document.querySelector('.nav__list');
+  let headerInner = document.querySelector('.header__inner');
+  toggleBtn.addEventListener('click', () => {
+    toggleIcon.classList.toggle('navbtn__icon--active');
+    menuList.classList.toggle('nav__list--active')
+    headerInner.classList.toggle('header__inner--active')
+  })
+
 })

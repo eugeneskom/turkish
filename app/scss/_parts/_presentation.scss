@@ -2,30 +2,50 @@
 
   &__inner {
     padding: 100px 0 80px;
+
+    @include r($r-md) {
+      padding: 60px 0 40px;
+    }
   }
 
   &__row {
-    @include rmin($r-md) {
+    margin: 0 -10px;
+
+    @include rmin($r-sm) {
       display: flex;
-    }
-    @include r($r-md){
       flex-wrap: wrap;
+      justify-content: space-around;
     }
+
   }
 
   &__col {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex-basis: 100%;
+    margin: 0 10px;
+
+    @include rmin($r-sm) {
+      flex-basis: calc((100% - 40px) / 2);
+    }
+
+    @include rmin($r-lg) {
+      flex-basis: 230px;
+    }
+
+    @include rmin($r-xl) {
+      flex-basis: calc((100% - 80px) / 4)
+    }
 
     &:not(:last-child) {
-      @include rmin($r-md) {
-        margin-right: 20px;
+      @include r($r-lg) {
+        margin-bottom: 60px;
       }
     }
+
   }
 
-  &__card-block{
+  &__card-block {
     padding: 28px 20px;
     border: 1px solid #DEDEFF;
     margin-bottom: 32px;
@@ -34,39 +54,48 @@
     justify-content: space-between;
     min-height: 185px;
     border-radius: 4px;
+
   }
-  &__price{
+
+  &__price {
     color: $t-secondary;
     font-family: 'Montserrat-ExtraBold';
     font-size: 40px;
     line-height: 1.2;
-    &--small{
+
+    &--small {
       font-size: 22px;
       line-height: 1.2;
     }
 
-    span{
+    span {
       font-size: 18px;
     }
   }
-  &__price-span{
+
+  &__price-span {
     display: block;
   }
-  &__desc{
+
+  &__desc {
     font-family: 'Montserrat-Bold';
   }
-  &__list{
+
+  &__list {
     margin-bottom: 32px;
   }
-  &__item{
+
+  &__item {
     padding-left: 32px;
     position: relative;
     font-size: 14px;
     line-height: 1.5;
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin-bottom: 12px;
     }
-    &::before{
+
+    &::before {
       content: "";
       position: absolute;
       left: 0;
@@ -78,16 +107,18 @@
       background-image: url(../images/icons/check.svg);
     }
   }
-  &__get{
-    margin-top: auto;
-    margin-bottom: 20px;
+
+  &__get {
+    margin: auto auto 20px;
   }
-  &__watch{
+
+  &__watch {
     padding-left: 28px;
     position: relative;
-    color:$t-secondary;
+    color: $t-secondary;
     font-family: 'Roboto-Black';
-    &::before{
+
+    &::before {
       content: "";
       position: absolute;
       left: 0;

@@ -9,21 +9,63 @@
   z-index: 100;
   background-color: $btn-text;
 
+  &__inner {
+    @include r($r-lg) {
+      display: flex;
+      flex-direction: column;
+      max-height: 90px;
+      overflow: hidden;
+      transform: max-height 0.3s;
+    }
+
+    &--active {
+      @include r($r-lg) {
+        max-height: 100%;
+      }
+    }
+  }
+
   &__contacts {
     padding: 16px 0;
     border-bottom: 1px solid #DEDEFF;
+    background-color: $btn-text;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include rmin($r-lg) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include r($r-lg) {
+      order: 1;
+      border-bottom-color: transparent;
+    }
   }
 
   &__navigation {
     padding: 16px 0;
+    background-color: $btn-text;
+
+    @include r($r-sm) {
+      border-bottom: 1px solid #DEDEFF;
+    }
+
   }
 
 }
 
+
+
 .social {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+
+  @include r($r-lg) {
+    order: 1;
+  }
 
   &__item {
     &:not(:last-child) {
@@ -37,16 +79,27 @@
     height: 16px;
     object-fit: contain;
     transition: filter 0.3s;
-    &:hover{
+
+    &:hover {
       filter: invert(42%) sepia(18%) saturate(2006%) hue-rotate(314deg) brightness(101%) contrast(103%);
     }
   }
 }
 
 .contacts {
+  @include r($r-lg) {
+    padding: 20px 0 36px;
+  }
+
+  @include rmin($r-lg) {
+    display: flex;
+  }
+
   &__number {
     &:not(:last-child) {
-      margin-right: 28px;
+      @include rmin($r-lg) {
+        margin-right: 28px;
+      }
     }
   }
 
@@ -82,10 +135,46 @@
 
 .nav {
   font-family: 'Montserrat-Bold';
+  background-color: $btn-text;
+  position: relative;
+  text-align: center;
+
+  @include rmin($r-lg) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include r($r-xl) {}
+
+  &__list {
+
+    @include rmin($r-lg) {
+      display: flex;
+    }
+
+    @include r($r-lg) {
+      margin-bottom: 38px;
+    }
+
+    &--active {}
+  }
 
   &__item {
     &:not(:last-child) {
-      margin-right: 32px;
+      @include rmin($r-lg) {
+        margin-right: 32px;
+      }
+    }
+
+  }
+
+  &__link {
+
+    @include r($r-md) {
+      display: block;
+      padding: 16px;
     }
   }
 
@@ -93,5 +182,82 @@
     padding: 14px 0;
     font-size: 16px;
     line-height: 1.25;
+
+    @include r($r-lg) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.logo {
+  display: block;
+  justify-self: flex-start;
+
+  @include r($r-lg) {
+    margin-bottom: 32px;
+  }
+
+}
+
+.navbtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 2;
+  background-color: transparent;
+  border: none;
+  padding: 3px;
+  cursor: pointer;
+  height: 44px;
+  width: 44px;
+
+  &__icon {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: $t-main;
+    transition: transform 0.3s;
+
+
+    @include rmin($r-xl) {
+      display: none;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: $t-main;
+      left: 0;
+      display: block;
+    }
+
+    &::before {
+      top: 7px;
+    }
+
+    &::after {
+      bottom: 7px;
+    }
+
+    &--active {
+      background-color: transparent;
+
+      &::before {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+
+      &::after {
+        transform: rotate(45deg);
+        bottom: 0;
+      }
+    }
   }
 }
