@@ -1,7 +1,9 @@
 .start {
   padding: 60px 0;
   color: $btn-text;
-
+  @include r($r-md){
+    padding: 40px 0;
+  }
   &__inner {
     position: relative;
     background-color: $t-secondary;
@@ -9,6 +11,13 @@
     background-repeat: no-repeat;
     padding: 80px 0 80px 70px;
     border-radius: 20px;
+    @include r($r-md){
+      padding: 60px 36px 60px 66px;
+    }
+
+    @include r($r-md){
+      background-position-x: center ;
+    }
 
     &::after {
       content: "";

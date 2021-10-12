@@ -18,11 +18,11 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.0.0",
     "gulp-uglify": "^3.0.2",
-    "jquery": "^3.5.1",
+    "jquery": "^3.6.0",
     "rateyo": "^2.3.5",
     "sass": "^1.42.1",
-    "slick-carousel": "^1.8.1",
-    "slick-slider": "^1.8.2"
+    "slick": "^1.12.2",
+    "slider": "^1.0.4"
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
@@ -30,6 +30,8 @@
     "node-sass": "^6.0.1",
     "resolve-url": "^0.2.1",
     "save-dev": "0.0.1-security",
+    "slick-carousel": "^1.8.1",
+    "slick-slider": "^1.8.2",
     "urix": "^0.1.0"
   }
 }

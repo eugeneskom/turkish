@@ -1,13 +1,13 @@
 .teachers {
   padding: 100px 0 60px;
+
   &__slider {
     margin-right: -10px;
     margin-left: -10px;
     padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
 
-    @include rmin($r-lg) {
-      display: flex;
-    }
   }
 
   &__item {
@@ -17,22 +17,32 @@
     @include rmin($r-lg) {
       flex: 1;
     }
+
+    @include r($r-md) {}
   }
 
   &__img-box {
     width: 100%;
-    max-height: 210px;
+    height: 210px;
     margin-bottom: 43px;
+    cursor: pointer;
+    border-radius: 12px;
   }
 
   &__photo {
     width: 100%;
     height: 100%;
-    display: block;
+    object-fit: cover;
+    border-radius: 12px;
+
   }
 
   &__content {
     padding: 0 20px;
+
+    @include r($r-xl) {
+      padding: 0;
+    }
   }
 
   &__name {
@@ -41,5 +51,41 @@
     color: $t-secondary;
     font-size: 20px;
     font-family: 'Montserrat-ExtraBold';
+  }
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  li {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $border;
+    cursor: pointer;
+    &:hover{
+      background-color: $t-secondary;
+    }
+    &.slick-active{
+      background-color: $btn-bg;
+    }
+  }
+
+  button {
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+   
+
+    
   }
 }

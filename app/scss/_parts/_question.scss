@@ -23,6 +23,15 @@
       justify-content: space-around;
       align-items: center;
     }
+    @include r($r-md){
+      text-align: center;
+    }
+  }
+
+  &__content{
+    @include r($r-md){
+      margin-bottom: 52px;
+    }
   }
   &__title{
     font-family: 'Montserrat-ExtraBold';

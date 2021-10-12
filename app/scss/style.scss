@@ -3,9 +3,10 @@
 @import 'libs';
 @import 'mixins';
 @import 'fonts';
-@import 'customclasses';
 @import 'global';
+@import 'customclasses';
 @import '_parts/header';
+@import '_parts/modal';
 @import '_parts/hero';
 @import '_parts/greeting';
 @import '_parts/presentation';
@@ -18,3 +19,5 @@
 @import '_parts/advantages';
 @import '_parts/question';
 @import '_parts/footer';
+
+

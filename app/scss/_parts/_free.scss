@@ -23,11 +23,25 @@
     font-family: 'Montserrat-ExtraBold';
     font-size: 36px;
     line-height: 1.3;
+    @include r($r-md){
+     margin-bottom: 32px; 
+    }
   }
 
   &__content {
     padding: 100px 70px;
     position: relative;
     z-index: 12;
+
+    @include rmin($r-md){
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    @include r($r-md){
+      padding: 60px 28px;
+      text-align: center;
+     }
+    
   }
 }
