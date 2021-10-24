@@ -1,0 +1,45 @@
+.question {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($t-secondary, 0.8);
+  }
+
+  &__inner {
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+    color: $btn-text;
+    @include rmin($r-lg) {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    @include r($r-md){
+      text-align: center;
+    }
+  }
+
+  &__content{
+    @include r($r-md){
+      margin-bottom: 52px;
+    }
+  }
+  &__title{
+    font-family: 'Montserrat-ExtraBold';
+    font-size: 48px;
+    margin-bottom: 28px;
+  }
+
+  &__text {
+    max-width: 600px;
+  }
+}

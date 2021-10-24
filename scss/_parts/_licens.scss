@@ -1,0 +1,63 @@
+.licens {
+  padding: 120px 0;
+  @include r($r-sm){
+    padding: 106px 0 0;
+  }
+
+  &__block {
+    position: relative;
+    background-color: $t-secondary;
+    box-shadow: 0px 10px 40px rgba(73, 95, 211, 0.22);
+    border-radius: 20px;
+    color: $btn-text;
+  }
+
+  &__content {
+    width: 54.5%;
+    padding: 100px 70px 100px 0;
+    margin-left: auto;
+
+    @include r($r-sm){
+      padding: 314px 36px 48px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    margin-bottom: 25px;
+    @include r($r-sm){
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 32px;
+  }
+
+  &__certificate {
+    position: absolute;
+    top: -60px;
+    left: 70px;
+    width: 35%;
+    max-height: 533px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include r($r-xl){
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @include r($r-sm){
+      top: -66px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 340px;
+      width: 255px;
+    }
+  }
+
+}

@@ -87,6 +87,7 @@ function build() {
     // 'app/images/**/*.*'
   ], { base: 'app' })
     .pipe(dest('dist'))
+    .pipe(dest(''))
 }
 
 function cleanDist() {

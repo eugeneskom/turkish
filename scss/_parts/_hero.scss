@@ -1,0 +1,67 @@
+.hero {
+  @include r($r-lg) {
+    text-align: center;
+  }
+
+  &__inner {
+    padding-left: 15px;
+
+    @include rmin($r-xl) {
+      margin-left: calc((100vw - 1200px) / 2);
+    }
+
+    @include rmin($r-lg) {
+      display: flex;
+    }
+  }
+
+  &__content {
+    max-width: 560px;
+    padding: 150px 0 0;
+
+    @include rmin($r-lg) {
+      align-self: center;
+      justify-self: center;
+    }
+
+    @include r($r-lg) {
+      margin: 0 auto 52px;
+
+    }
+  }
+
+  &__slogan {
+    font-family: 'Lato-Regular';
+    color: $t-secondary;
+    margin-bottom: 28px;
+  }
+
+  &__title {
+    font-size: 56px;
+    line-height: 1.3;
+    margin-bottom: 52px;
+  }
+
+  &__bg {
+    display: inline-block;
+    margin-left: auto;
+
+    @include r($r-lg) {
+      margin: 0 auto;
+    }
+
+    @include r($r-sm) {
+      width: 327px;
+    }
+  }
+
+  &__bg-img {
+    max-height: 768px;
+    border-radius: 12px;
+
+    @include r($r-sm) {
+      max-height: 276px;
+      width: 100%;
+    }
+  }
+}

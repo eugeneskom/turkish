@@ -1,0 +1,196 @@
+.course {
+  background-color: $section-bg;
+
+  &__inner {
+    padding: 80px 0;
+  }
+
+}
+
+.tabs {
+  &__buttons {
+    margin-bottom: 40px;
+    font-family: 'Montserrat-Bold';
+    display: flex;
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgba($t-secondary, 0.5);
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    padding-bottom: 20px;
+    flex: 1;
+
+    &:hover {
+      color: rgba($t-secondary, 1);
+    }
+
+    &:focus {
+      transform: scale(1.2);
+      color: rgba($t-secondary, 1);
+    }
+
+    &.active {
+      color: $btn-bg;
+      border-bottom-color: $btn-bg;
+    }
+
+  }
+
+  &__content {
+    box-shadow: 0px 10px 40px rgba(0, 11, 68, 0.22);
+    border-radius: 10px;
+    padding: 48px 52px;
+    position: relative;
+
+    @include r($r-lg) {
+      padding: 32px 24px;
+    }
+  }
+
+  &__page {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__title {
+    color: $t-secondary;
+    margin-bottom: 24px;
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 24px;
+    font-family: 'Montserrat-ExtraBold';
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 48px;
+  }
+
+  &__sentence {
+    font-size: 14px;
+    line-height: 1.5;
+
+  }
+
+  &__fat {
+    font-family: 'Lato-Heavy';
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  &__highlight {
+    font-family: 'Lato-Heavy';
+    color: $btn-bg;
+  }
+
+  &__row {
+    @include rmin($r-lg) {
+      display: flex;
+    }
+  }
+
+  &__col {
+    @include rmin($r-lg) {
+      flex: 1;
+
+      &:not(:last-child) {
+        margin-right: 60px;
+      }
+    }
+
+    @include r($r-lg) {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0px 10px 40px rgba(0, 11, 68, 0.22);
+    border-radius: 50%;
+    border: none;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $t-secondary;
+
+      .tabs__svg {
+        fill: #fff;
+      }
+    }
+
+    &--left {
+      left: -100px;
+    }
+
+    &--right {
+      right: -100px;
+
+    }
+  }
+
+  &__svg {
+    width: 8px;
+    height: 14px;
+    fill: $btn-bg;
+  }
+
+}
+
+.record {
+  &__item {
+    padding-left: 32px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url('../images/icons/check.svg');
+    }
+  }
+}
+
+.structure {
+  &__item {
+    position: relative;
+    border-bottom: 4px solid $btn-bg;
+  }
+
+  &__percentage {
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+    height: 4px;
+    background-color: $border;
+  }
+}
